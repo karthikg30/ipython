@@ -1,0 +1,23 @@
+def mean_list(list):
+    n = 0
+    total = 0 
+    for x in list:
+        check_var = isinstance (x,str)
+        if check_var:
+            list.remove(x)
+        
+        else:
+            n = n + 1
+            total = total + x
+    
+    lngth = len(list)
+    
+    
+    if (lngth % 2) != 0:
+        print (list[3])
+    else:
+        index1 = int((lngth / 2))
+        median = (list[index1] + list[index1 + 1] ) / 2
+        
+    print ('Mean for the given list is: ', (round((total/n), 2)))
+    print ('Median for the given list is: ', (round(median, 2)))
